@@ -1,14 +1,3 @@
-class Dil_H2SO4():
-    effervesence = False
-
-class Conc_H2SO4():
-    white_fumes = False
-    smell = None
-    brown_fumes = False
-
-class BaCl():
-    white_precipitate = False
-
 print('Test for Acid Radical')
 print('First add dil. sulphuric acid to the salt solution')
 t1 = input('Did you observe effervesence? (y/n) : ')
@@ -38,5 +27,42 @@ t5 = input('Are you getting any white precipitate? (y/n) : ')
 if t5.lower()=='y':
     print('It maybe a sulphate salt')
     #Proceed with confirmatory test
+else:
+    print('Salt is out of syllabus')
+
+print('Now let us test for basic radical')
+print('Add sodium hydroxide to the salt solution and heat')
+t6 = input('Are you getting a smell of ammonia? (y/n) : ')
+if t6.lower()=='y':
+    print('It maybe a salt of ammonia')
+    #proceed with the confirmatory test
+else:
+    print('Add dil. hydrochloric acid to the salt solution')
+
+t7 = input('Are you getting a white precipitate')
+if t7.lower()=='y':
+    print('It maybe a salt of lead')
+    #proceed with the confirmatory test
+else:
+    print('Add hydrogen disulphide to the salt solution')
+
+t8 = input('Are you getting a black precipitate? (y/n) : ')
+if t8.lower()=='y':
+    print('It maybe a salt of copper')
+    #proceed with the confirmatory test
+else:
+    print('Add ammonium chloride followed by ammonium hydroxide to the salt solution')
+
+t9 = input('Are you getting a reddish brown precipitate? (y/n) : ')
+if t9.lower()=='y':
+    print('It maybe a salt of iron')
+    #proceed with the confirmatory test
+else:
+    print('Add hydrogen disulphide to the salt solution')
+
+t10 = input('Are you getting a white precipitate? (y/n) : ')
+if t10.lower()=='y':
+    print('It maybe a salt of zinc')
+    #proceed with the confirmatory test
 else:
     print('Salt is out of syllabus')
