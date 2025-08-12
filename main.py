@@ -17,6 +17,7 @@ def sulphate():
         c5 = input('Are you getting a white precipitate? (y/n) : ')
         if c5.lower()=='y':
             print('Sulphate is confirmed')
+            ar = 'Sulphate'
         else:
             print('Salt is out of syllabus')
     else:
@@ -31,6 +32,7 @@ def nitrate():
         c4 = input('Does it form a brown ring? (y/n) : ')
         if c4.lower()=='y':
             print('Nitrate is confirmed')
+            ar = 'Nitrate'
         else:
             sulphate()
     else:
@@ -45,6 +47,7 @@ def acetate():
         c3 = input('Does the solution turn blood red? (y/n) : ')
         if c3.lower()=='y':
             print('Acetate is confirmed')
+            ar = 'Acetate'
         else:
             nitrate()
     else:
@@ -60,6 +63,7 @@ def chloride():
         c2 = input('Are you getting a white precipitate? (y/n) : ')
         if c2.lower()=='y':
             print('Chloride is confirmed')
+            ar = 'Chloride'
         else:
             acetate()
     else:
@@ -74,6 +78,7 @@ def carbonate():
         c1 = input('Is the solution turning milky? (y/n) : ')
         if c1.lower()=='y':
             print('Carbonate is confirmed')
+            ar = 'Carbonate'
         else:
             chloride()
     else:
@@ -89,14 +94,18 @@ def magnesium():
         t16 = input('Did it turn sky blue? (y/n) : ')
         if t16.lower()=='y':
             print('Magnesium is confirmed')
+            br = 'Magnesium'
         else:
             print('You have reached dead end')
+    else:
+        print('Salt is out of syllabus')
 
 def calcium():
     print('To the third part, add ammonium oxalate')
     t13 = input('Áre you getting a white precipitate? (y/n) : ')
     if t13.lower()=='y':
         print('Çalcium confirmed')
+        br = 'Calcium'
     else:
         print('You have reached dead end')
 
@@ -105,6 +114,7 @@ def strontium():
     t12 = input('Áre you getting a white precipitate? (y/n) : ')
     if t12.lower()=='y':
         print('Strontium confirmed')
+        br = 'Strontium'
     else:
         calcium()
 
@@ -113,6 +123,7 @@ def barium():
     t11 = input('Are you getting a yellow precipitate? (y/n) : ')
     if t11.lower()=='y':
         print('Barium confirmed')
+        br = 'Barium'
     else:
         strontium()
     
@@ -127,14 +138,21 @@ def zinc():
         c10 = input('Are you getting a white precipitate? (y/n) : ')
         if c10.lower()=='y':
             print('Zinc is confirmed')
+            br = 'Zinc'
         else:
             print('Sr, Ca, Ba salt')
+            t14 = input('Are you getting a white precipitate? (y/n) : ')
+            if t14.lower()=='y':
+                print('Dissolve the precipitate in acetic acid and then divide it into 3 parts')
+                barium()
+            else:
+                print('Add disodium hydrogen phosphate solution to the above solution')
+                magnesium()
     else:
-        print('Sr, Ca, Ba salt')
         print('Ádd ammonium carbonate solution')
         t14 = input('Áre you getting a white precipitate? (y/n) : ')
         if t14.lower()=='y':
-            print('Dissolve the precipitate in acetic acid and then divide into 3 parts')
+            print('Dissolve the precipitate in acetic acid and then divide it into 3 parts')
             barium()
         else:
             print('Ádd disodium hydrogen phosphate solution to the above solution')
@@ -155,6 +173,7 @@ def iron():
         c9b = input('Did it turn prussian blue? (y/n) : ')
         if c9a.lower()=='y' and c9b.lower()=='y':
             print('Iron is confirmed')
+            br = 'Iron'
         else:
             zinc()
     else:
@@ -170,6 +189,7 @@ def copper():
         c8 = input('Did you get a chocolate brown precipitate? (y/n) : ')
         if c8.lower()=='y':
             print('Copper is confirmed')
+            br = 'Copper'
         else:
             iron()
     else:
@@ -185,6 +205,7 @@ def lead():
         c7 = input('Did both the parts turn yellow? (y/n) : ')
         if c7.lower()=='y':
             print('Lead is confirmed')
+            br = 'Lead'
         else:
             copper()
     else:
@@ -200,6 +221,7 @@ def ammonia():
         c6 = input('Did the cotton turn brown? (y/n) : ')
         if c6.lower()=='y':
             print('Ammonia is confirmed')
+            br = 'Ammonia'
         else:
             lead()
     else:
