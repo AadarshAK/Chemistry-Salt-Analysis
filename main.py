@@ -81,6 +81,41 @@ def carbonate():
 
 
 #Basic radical functions
+def magnesium():
+    t15 = input('Are you getting a white precipitate? (y/n) : ')
+    if t15.lower()=='y':
+        print('Maybe magnesium')
+        print('To the original solution, add ammonium chloride, ammonium hydroxide, ammonium carbonate and magnesson reagent')
+        t16 = input('Did it turn sky blue? (y/n) : ')
+        if t16.lower()=='y':
+            print('Magnesium is confirmed')
+        else:
+            print('You have reached dead end')
+
+def calcium():
+    print('To the third part, add ammonium oxalate')
+    t13 = input('Áre you getting a white precipitate? (y/n) : ')
+    if t13.lower()=='y':
+        print('Çalcium confirmed')
+    else:
+        print('You have reached dead end')
+
+def strontium():
+    print('To the second part, add ammonium sulphate')
+    t12 = input('Áre you getting a white precipitate? (y/n) : ')
+    if t12.lower()=='y':
+        print('Strontium confirmed')
+    else:
+        calcium()
+
+def barium():
+    print('Two one part of the above solution add Potassium Chromate')
+    t11 = input('Are you getting a yellow precipitate? (y/n) : ')
+    if t11.lower()=='y':
+        print('Barium confirmed')
+    else:
+        strontium()
+    
 def zinc():
     print('Add hydrogen disulphide to the salt solution')
     t10 = input('Are you getting a white precipitate? (y/n) : ')
@@ -96,6 +131,16 @@ def zinc():
             print('Sr, Ca, Ba salt')
     else:
         print('Sr, Ca, Ba salt')
+        print('Ádd ammonium carbonate solution')
+        t14 = input('Áre you getting a white precipitate? (y/n) : ')
+        if t14.lower()=='y':
+            print('Dissolve the precipitate in acetic acid and then divide into 3 parts')
+            barium()
+        else:
+            print('Ádd disodium hydrogen phosphate solution to the above solution')
+            #Magnesium function
+            magnesium()
+
 
 def iron():
     print('Add ammonium chloride followed by ammonium hydroxide to the salt solution')
