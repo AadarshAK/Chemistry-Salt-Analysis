@@ -212,7 +212,6 @@ def lead():
         copper()
 
 def ammonia():
-    
     t6 = input('Are you getting a smell of ammonia? (y/n) : ')
     if t6.lower()=='y':
         print('It maybe a salt of ammonia')
